@@ -1,0 +1,159 @@
+@import './colors';
+
+
+[draggable] {
+    -moz-user-select: all;
+    -khtml-user-select: all;
+    -webkit-user-select: all;
+    user-select: all;
+    /* Required to make elements draggable in old WebKit */
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+}
+
+body{
+    font-family: sans-serif;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background: $gray-light;
+    // user-select: none;
+    // -moz-user-select: none;
+    
+
+    label{
+        font-weight: bold;
+    }
+
+    input[type="text"]{
+        height: 35px;
+        line-height: 35px;
+        width: 250px;
+        border: 1px solid $gray-light;
+        border-radius: 5px;
+        padding: 0 10px;
+        font-size: 14pt;
+        font-family: sans-serif;
+        color: $gray-dark;
+    }
+
+    .counter{
+        width: 75px;
+        height: 45px;
+        background: $white;
+        text-align: center;
+        padding: 7px;
+        box-sizing: border-box;
+        font-size: 10pt;
+        float: right;
+        line-height: 15px;
+        color: $black;
+        
+
+        p{
+            margin: 0;
+            font-weight: bold;
+        }
+        span{
+            color: $gray-dark;
+        }
+    }
+
+    .container{
+        width: 100%;
+        height: fit-content;
+        position: absolute;
+        padding: 30px;
+        box-sizing: border-box;
+
+        #placeholder {
+            width: 100%;
+            min-height: 70px;
+            height: fit-content;
+            border: 1px solid $gray-light;
+            color: $white;
+            background: $gray-mid;
+            font-size: 12pt;
+            box-sizing: border-box;
+            padding: 25px 15px;
+            line-height: 20px;
+          }
+        //   .placeholder:before {
+        //     content: "Drop here...";
+        //     color: white;
+        //   }
+
+        .red{
+            background-color: red;
+        }
+
+        .NewTaskForm{
+            display: block;
+        }
+
+        .statusContainer{
+            display: flex;
+            width: 100%;
+            padding: 10px;
+
+            .list{
+                width: 33%;
+                min-width: 270px;
+                height: fit-content;
+                margin: 10px;
+                display: inline-block;
+                list-style: none;
+                padding-inline-start: 0;
+    
+                .header{
+                    width: 100%;
+                    height: 80px;
+                    background: $gray-dark;
+                    color: $white;
+                    font-size: 15pt;
+                    font-weight: bold;
+                    padding: 18px;
+                    box-sizing: border-box;
+                    line-height: 40px;
+                    border: 1px solid $gray-light;
+                    
+                }
+                .task{
+                    width: 100%;
+                    height: 70px;
+                    border: 1px solid $gray-light;
+                    color: $black;
+                    background: $white;
+                    font-size: 12pt;
+                    box-sizing: border-box;
+                    padding: 15px;
+                    cursor: all-scroll;
+                    user-select: all;
+                    -moz-user-select: all;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    &::selection { 
+                        background: transparent; 
+                        display: block;
+                        
+                    }
+
+                    span{
+                        user-select: all;
+                        -moz-user-select: all;
+
+                        &::selection { 
+                            background: transparent; 
+                        }
+                    }
+                    
+                }
+            }
+        }
+        
+    }
+
+    
+}
